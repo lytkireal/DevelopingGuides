@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomClass.h"
+#import "ChildObject.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+
+  [ChildObject methodOfClass];
+  
+  ChildObject *customObject = [[ChildObject alloc] init];
+  
+  NSLog(@"%@", [customObject saySomething]);
+  
   return YES;
 }
 

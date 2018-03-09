@@ -13,6 +13,8 @@
 		D0178D7C204F8DD70076394B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0178D7B204F8DD70076394B /* Assets.xcassets */; };
 		D0178D7F204F8DD70076394B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0178D7D204F8DD70076394B /* LaunchScreen.storyboard */; };
 		D0178D82204F8DD70076394B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0178D81204F8DD70076394B /* main.m */; };
+		D030BA7B2052EA8100E3D830 /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D030BA7A2052EA8100E3D830 /* CustomClass.m */; };
+		D030BA7E2052FDBE00E3D830 /* ChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D030BA7D2052FDBD00E3D830 /* ChildObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D0178D7E204F8DD70076394B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0178D80204F8DD70076394B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0178D81204F8DD70076394B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D030BA792052EA8100E3D830 /* CustomClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomClass.h; sourceTree = "<group>"; };
+		D030BA7A2052EA8100E3D830 /* CustomClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomClass.m; sourceTree = "<group>"; };
+		D030BA7C2052FDBD00E3D830 /* ChildObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildObject.h; sourceTree = "<group>"; };
+		D030BA7D2052FDBD00E3D830 /* ChildObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,10 @@
 			children = (
 				D0178D72204F8DD70076394B /* AppDelegate.h */,
 				D0178D73204F8DD70076394B /* AppDelegate.m */,
+				D030BA7C2052FDBD00E3D830 /* ChildObject.h */,
+				D030BA7D2052FDBD00E3D830 /* ChildObject.m */,
+				D030BA792052EA8100E3D830 /* CustomClass.h */,
+				D030BA7A2052EA8100E3D830 /* CustomClass.m */,
 				D0178D75204F8DD70076394B /* ViewController.h */,
 				D0178D76204F8DD70076394B /* ViewController.m */,
 				D0178D78204F8DD70076394B /* Main.storyboard */,
@@ -143,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0178D77204F8DD70076394B /* ViewController.m in Sources */,
+				D030BA7E2052FDBE00E3D830 /* ChildObject.m in Sources */,
+				D030BA7B2052EA8100E3D830 /* CustomClass.m in Sources */,
 				D0178D82204F8DD70076394B /* main.m in Sources */,
 				D0178D74204F8DD70076394B /* AppDelegate.m in Sources */,
 			);
