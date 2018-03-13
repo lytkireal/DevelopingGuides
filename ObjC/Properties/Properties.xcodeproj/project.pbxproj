@@ -13,6 +13,8 @@
 		D014CD512053CBC600CA866D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D014CD502053CBC600CA866D /* Assets.xcassets */; };
 		D014CD542053CBC600CA866D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D014CD522053CBC600CA866D /* LaunchScreen.storyboard */; };
 		D014CD572053CBC600CA866D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D014CD562053CBC600CA866D /* main.m */; };
+		D014CD5F2053EBD700CA866D /* ASBoxer.m in Sources */ = {isa = PBXBuildFile; fileRef = D014CD5E2053EBD700CA866D /* ASBoxer.m */; };
+		D014CD622056305100CA866D /* ASBoxerSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D014CD612056305000CA866D /* ASBoxerSon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D014CD532053CBC600CA866D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D014CD552053CBC600CA866D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D014CD562053CBC600CA866D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D014CD5D2053EBD700CA866D /* ASBoxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASBoxer.h; sourceTree = "<group>"; };
+		D014CD5E2053EBD700CA866D /* ASBoxer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASBoxer.m; sourceTree = "<group>"; };
+		D014CD602056305000CA866D /* ASBoxerSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASBoxerSon.h; sourceTree = "<group>"; };
+		D014CD612056305000CA866D /* ASBoxerSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASBoxerSon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				D014CD482053CBC600CA866D /* AppDelegate.m */,
 				D014CD4A2053CBC600CA866D /* ViewController.h */,
 				D014CD4B2053CBC600CA866D /* ViewController.m */,
+				D014CD5D2053EBD700CA866D /* ASBoxer.h */,
+				D014CD5E2053EBD700CA866D /* ASBoxer.m */,
+				D014CD602056305000CA866D /* ASBoxerSon.h */,
+				D014CD612056305000CA866D /* ASBoxerSon.m */,
 				D014CD4D2053CBC600CA866D /* Main.storyboard */,
 				D014CD502053CBC600CA866D /* Assets.xcassets */,
 				D014CD522053CBC600CA866D /* LaunchScreen.storyboard */,
@@ -142,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D014CD5F2053EBD700CA866D /* ASBoxer.m in Sources */,
+				D014CD622056305100CA866D /* ASBoxerSon.m in Sources */,
 				D014CD4C2053CBC600CA866D /* ViewController.m in Sources */,
 				D014CD572053CBC600CA866D /* main.m in Sources */,
 				D014CD492053CBC600CA866D /* AppDelegate.m in Sources */,
