@@ -22,6 +22,7 @@
 {
   self = [super init];
   if (self) {
+    NSLog(@"ASBoxer is created.");
     self.nameCount = 0;
     self.name = @"Default";
     self.age = 30;
@@ -31,8 +32,21 @@
   return self;
 }
 
+- (void)dealloc {
+  NSLog(@"-> object is deallocated");
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+  ASBoxer *boxer = [[ASBoxer alloc] init];
+  boxer.name = [self.name copy];
+  boxer.age = self.age;
+  boxer.height = self.height;
+  boxer.weight = self.weight;
+  return boxer;
+}
+
 - (void)setName:(NSString *) inputName {
-  NSLog(@"setter is called");
+  //NSLog(@"setter is called");
  
   _name = inputName;
 }

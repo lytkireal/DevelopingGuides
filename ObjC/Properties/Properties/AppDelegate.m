@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  ASBoxer *boxer = [[ASBoxer alloc] init];
+//  ASBoxer *boxer = [[ASBoxer alloc] init];
   /*
   boxer.name = @"Mike";
   boxer.age = 26;
@@ -28,15 +28,15 @@
   
   //boxer.nameCount = 0;
   
-  [boxer setName:@"Makunoichi"];
-  [boxer setAge:24];
-  [boxer setHeight:1.88f];
-  [boxer setWeight:85.f];
-  
-  NSLog(@"age = %ld", [boxer howOldAreYou]);
-  
-  NSLog(@"name - %@", boxer.name);
-  NSLog(@"name - %@", [boxer name]);
+//  [boxer setName:@"Makunoichi"];
+//  [boxer setAge:24];
+//  [boxer setHeight:1.88f];
+//  [boxer setWeight:85.f];
+//
+//  NSLog(@"age = %ld", [boxer howOldAreYou]);
+//
+//  NSLog(@"name - %@", boxer.name);
+//  NSLog(@"name - %@", [boxer name]);
   
 //  NSLog(@"name - %@", boxer.name);
 //  NSLog(@"age - %ld", (long)boxer.age);
@@ -49,7 +49,18 @@
 //  NSLog(@"height - %f", [boxer height]);
 //  NSLog(@"weight - %f", [boxer weight]);
   
+  [self p_testObject];
+  
+  NSLog(@"test is over");
+  
   return YES;
+}
+
+- (void)p_testObject {
+  ASBoxer *object = [[ASBoxer alloc] init];
+  NSLog(@"object address %p", object);
+  self.boxer = object;
+  NSLog(@"boxer address %p", _boxer);
 }
 
 

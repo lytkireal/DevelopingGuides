@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ASBoxer;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (copy, nonatomic, getter=getBoxer) ASBoxer *boxer;
+//@property (weak, nonatomic) ASBoxer *boxer;
+//@property (weak, nonatomic) ASBoxer *boxer;
 
 @end
 

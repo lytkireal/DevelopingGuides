@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ASBoxer : NSObject
+@interface ASBoxer : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) NSInteger age;
