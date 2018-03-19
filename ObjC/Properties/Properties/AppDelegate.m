@@ -10,7 +10,8 @@
 #import "ASBoxer.h"
 
 @interface AppDelegate ()
-
+@property (strong) dispatch_queue_t myQueue;
+@property (strong) NSOperationQueue *operationQueue;
 @end
 
 @implementation AppDelegate
@@ -49,7 +50,24 @@
 //  NSLog(@"height - %f", [boxer height]);
 //  NSLog(@"weight - %f", [boxer weight]);
   
-  [self p_testObject];
+  _myQueue = dispatch_queue_create("lala", DISPATCH_QUEUE_CONCURRENT);
+  _myQueue.accessibilityLabel = @"lala";
+  
+  _operationQueue = [[NSOperationQueue alloc] init];
+  _operationQueue.accessibilityLabel = @"_operationQueue";
+  _operationQueue.name = @"operationQueue.name";
+  
+  [_operationQueue addOperationWithBlock:^{
+    //[self p_testObject];
+  }];
+  
+  
+  
+  dispatch_async(_myQueue, ^{
+    [self p_testObject];
+  });
+  
+  NSLog(@"%@", [NSOperationQueue currentQueue].underlyingQueue);
   
   NSLog(@"test is over");
   
@@ -57,6 +75,16 @@
 }
 
 - (void)p_testObject {
+  NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].name);
+  NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].accessibilityLabel);
+  NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].accessibilityAttributedLabel);
+  
+  NSLog(@"name of queue = %@", dispatch_get_specific(<#const void * _Nonnull key#>)());
+  
+  NSLog(@"Running on %@ thread", _myQueue.accessibilityLabel);
+  printf("-> %s\n", [[NSThread currentThread].accessibilityLabel UTF8String]);
+  printf("-> hello\n");
+  
   ASBoxer *object = [[ASBoxer alloc] init];
   NSLog(@"object address %p", object);
   self.boxer = object;
