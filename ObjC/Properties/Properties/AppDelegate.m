@@ -64,6 +64,10 @@
   
   
   dispatch_async(_myQueue, ^{
+    //[self p_testObject];
+  });
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
     [self p_testObject];
   });
   
@@ -78,8 +82,7 @@
   NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].name);
   NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].accessibilityLabel);
   NSLog(@"QUEUE = %@", [NSOperationQueue currentQueue].accessibilityAttributedLabel);
-  
-  NSLog(@"name of queue = %@", dispatch_get_specific(<#const void * _Nonnull key#>)());
+  NSLog(@"-> Queue = %s", dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL));
   
   NSLog(@"Running on %@ thread", _myQueue.accessibilityLabel);
   printf("-> %s\n", [[NSThread currentThread].accessibilityLabel UTF8String]);
