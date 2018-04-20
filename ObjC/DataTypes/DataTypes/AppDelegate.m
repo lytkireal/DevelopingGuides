@@ -9,6 +9,15 @@
 #import "AppDelegate.h"
 #import "ASStudent.h"
 
+typedef struct {
+  float heightInMeters;
+  int weightInKilos;
+} Person;
+
+float bodyMassIndex (Person person) {
+  return person.weightInKilos / (person.heightInMeters * person.heightInMeters);
+};
+
 @interface AppDelegate ()
 
 @end
@@ -119,6 +128,41 @@
     NSLog(@"%@", NSStringFromCGPoint(point));
   }
   */
+  
+
+  // @MARK: - Struct
+  /*
+  typedef struct MyPoint {
+    float w,x,y,z;
+  } MyPoint;
+  
+  Person mikey;
+  mikey.heightInMeters = 1.77f;
+  mikey.weightInKilos = 75;
+  
+  Person aaron;
+  aaron.heightInMeters = 1.99f;
+  aaron.weightInKilos = 90;
+  
+  printf("->mikey is %.2f meters tall\n", mikey.heightInMeters);
+  printf("mikey weighs %d kilograms\n", mikey.weightInKilos);
+  printf("->aaron is %.2f meters tall\n", aaron.heightInMeters);
+  printf("aaron weighs %d kilograms\n", mikey.weightInKilos);
+  
+  float bmi;
+  bmi = bodyMassIndex(mikey);
+  printf("mikey's bmi = %.2f\n", bmi);
+  
+  bmi = bodyMassIndex(aaron);
+  printf("aaron's bmi = %.2f\n", bmi);
+  */
+  // *challenge
+  long secondsSince1970 = time(NULL);
+  printf("It has been %ld seconds since 1970\n", secondsSince1970);
+  
+  struct tm now;
+  localtime_r(&secondsSince1970, &now);
+  printf("The time is %d-%d-%d\n", now.tm_mday, now.tm_mon + 1, now.tm_year - 100 + 2000);
   
   return YES;
 }
