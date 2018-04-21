@@ -47,6 +47,23 @@
       NSLog(@"Last name = %@", ((Child *)obj).lastName);
     }
   }
+    
+    [array enumerateObjectsUsingBlock:^(ASObject* obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@"object name = %@", obj.name);
+        [obj action];
+        
+        if ([obj isKindOfClass:[Child class]]) {
+            NSLog(@"Last name = %@", ((Child *)obj).lastName);
+        }
+    }];
+    
+    id object = nil;
+    
+    if (object && [object respondsToSelector:@selector(newNumber:)]) {
+        [object newNumber:10];
+    }
+    
+    
   
   return YES;
 }
