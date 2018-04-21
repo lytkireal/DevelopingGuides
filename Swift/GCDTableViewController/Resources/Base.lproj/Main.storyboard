@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GTc-Ug-gLN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="NG2-nb-lN6">
+            <objects>
+                <tableViewController id="GTc-Ug-gLN" customClass="GCDTableViewController" customModule="GCDTableViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" sectionHeaderHeight="28" sectionFooterHeight="28" id="XJ4-nM-BS6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageGCD" rowHeight="290" id="i0i-5Z-0c2" customClass="ImageTableViewCell" customModule="GCDTableViewController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="290"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i0i-5Z-0c2" id="nzZ-HW-cka">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="289.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-8h-R4t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="289.5"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wn1-r3-mlB">
+                                            <rect key="frame" x="169" y="126" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="LUM-8h-R4t" secondAttribute="bottom" id="AAs-ki-5VN"/>
+                                        <constraint firstItem="LUM-8h-R4t" firstAttribute="centerY" secondItem="nzZ-HW-cka" secondAttribute="centerY" id="DQf-01-zwD"/>
+                                        <constraint firstItem="wn1-r3-mlB" firstAttribute="centerX" secondItem="nzZ-HW-cka" secondAttribute="centerX" id="Fpn-FJ-r7p"/>
+                                        <constraint firstAttribute="trailing" secondItem="LUM-8h-R4t" secondAttribute="trailing" id="GWd-E5-mXo"/>
+                                        <constraint firstItem="LUM-8h-R4t" firstAttribute="leading" secondItem="nzZ-HW-cka" secondAttribute="leading" id="Jvn-tv-fy7"/>
+                                        <constraint firstItem="wn1-r3-mlB" firstAttribute="centerY" secondItem="nzZ-HW-cka" secondAttribute="centerY" id="KNr-Be-1Bl"/>
+                                        <constraint firstItem="LUM-8h-R4t" firstAttribute="centerX" secondItem="nzZ-HW-cka" secondAttribute="centerX" id="Vg3-Zo-pZV"/>
+                                        <constraint firstItem="LUM-8h-R4t" firstAttribute="top" secondItem="nzZ-HW-cka" secondAttribute="top" id="WBN-Fa-iik"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="spinner" destination="wn1-r3-mlB" id="ALt-te-OOu"/>
+                                    <outlet property="tweetImage" destination="LUM-8h-R4t" id="N1Y-yN-Ado"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GTc-Ug-gLN" id="Y5l-Gf-atJ"/>
+                            <outlet property="delegate" destination="GTc-Ug-gLN" id="Ttj-TA-RSH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqu-8G-bWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="148"/>
+        </scene>
+    </scenes>
+</document>
